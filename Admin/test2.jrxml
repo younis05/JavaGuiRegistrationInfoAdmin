@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f15541d-adfa-4f1c-a8a4-ded358d997d8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from admininfo]]>
+	</queryString>
+	<field name="id" class="java.lang.Object"/>
+	<field name="name" class="java.lang.Object"/>
+	<field name="age" class="java.lang.Object"/>
+	<field name="gender" class="java.lang.Object"/>
+	<field name="date" class="java.lang.Object"/>
+	<field name="image" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="528df7f4-16e5-4daa-96d2-d54dd47c08ff" x="251" y="17" width="116" height="37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="32" isBold="true" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[العنوان 2]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="yyyy/MM/dd">
+				<reportElement uuid="df5a8738-63df-48a2-8250-aeb28ba4c222" x="0" y="15" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="2841b9d7-e7d0-4118-9d3f-55a7ee0e6220" x="0" y="0" width="277" height="20"/>
+				<textElement/>
+				<text><![CDATA[image]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="493e9f91-9971-40df-8636-d37a11a23896" x="277" y="0" width="277" height="20"/>
+				<textElement/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="81" splitType="Stretch">
+			<textField>
+				<reportElement uuid="18f6a971-2f27-4aed-9f4e-62dcc6642402" x="277" y="0" width="277" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="12" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{name}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="cafd7250-1fd4-4783-a5f6-1ac80f25d060" x="0" y="0" width="277" height="81"/>
+				<imageExpression><![CDATA[new java.io.ByteArrayInputStream($F{image})]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="140" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement uuid="b433c502-068e-4187-8d8d-7a3f580fe39f" x="150" y="0" width="271" height="140"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Dummy Series"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{name}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{age}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+				</barPlot>
+			</barChart>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

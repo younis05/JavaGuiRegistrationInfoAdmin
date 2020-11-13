@@ -1,0 +1,6 @@
+1- correct netbans *correct url jdk*
+and utf-8 C:\Program Files\NetBeans 8.2\etc
+2- correction IReport
+paste irfonts vers =
+   correct url
+C:\Program Files (x86)\Jaspersoft\iReport-5.6.0\ireport\fonts

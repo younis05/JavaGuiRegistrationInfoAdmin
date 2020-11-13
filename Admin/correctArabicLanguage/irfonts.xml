@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+ 
+<fontFamily name="Arial">
+<normal><![CDATA[C:/Windows/fonts/arial.ttf]]></normal>
+<bold><![CDATA[C:/Windows/fonts/arialbd.ttf]]></bold>
+<italic><![CDATA[C:/Windows/fonts/ariali.ttf]]></italic>
+<boldItalic><![CDATA[C:/Windows/fonts/arialbi.ttf]]></boldItalic>
+<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+</fontFamily>
+ 
+ 
+<fontFamily name="Tahoma">
+<normal><![CDATA[C:/Windows/fonts/tahoma.ttf]]></normal>
+<bold><![CDATA[C:/Windows/fonts/tahomabd.ttf]]></bold>
+<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+</fontFamily>
+ 
+ 
+</fontFamilies>

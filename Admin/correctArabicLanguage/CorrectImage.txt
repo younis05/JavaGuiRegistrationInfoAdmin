@@ -1,0 +1,2 @@
+1- img =Object
+2- coller vers= new java.io.ByteArrayInputStream($F{image})
